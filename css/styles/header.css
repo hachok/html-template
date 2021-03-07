@@ -1,0 +1,68 @@
+/* The navigation menu */
+.menu {
+    overflow: hidden;
+    background-color: var(--dark);
+}
+
+.submenu {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    opacity: 0;
+    background-color: var(--red);
+    color: var(--white);
+    width: 100%;
+    z-index: 1;
+}
+
+ul.menu, ul.submenu {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.menu .menu_item {
+    float: left;
+}
+
+.menu .menu_item, .submenu .submenu_item {
+    overflow: hidden;
+    color: var(--white);
+}
+
+/* Buttons */
+.menu .menu_item-btn, .submenu .submenu_item-btn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: inherit;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* On hover */
+.menu .menu_item:hover .submenu {
+    visibility: visible;
+    top: 46px;
+    opacity: 100%;
+    transition: all 0.5s ease-out;
+}
+
+.menu .menu_item:hover .menu_item-btn {
+    background-color: var(--red);
+}
+
+.submenu .submenu_item:hover {
+    background-color: var(--grey);
+    color: var(--black);
+}
+
+@media only screen and (min-width: 600px) {
+    .submenu .submenu_item {
+        float: left;
+    }
+}
