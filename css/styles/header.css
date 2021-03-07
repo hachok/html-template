@@ -45,14 +45,14 @@ ul.menu, ul.submenu {
 }
 
 /* On hover */
-.menu .menu_item:hover .submenu {
+.menu .menu_item.menu_item--active .submenu {
     visibility: visible;
     top: 46px;
     opacity: 100%;
     transition: all 0.5s ease-out;
 }
 
-.menu .menu_item:hover .menu_item-btn {
+.menu .menu_item.menu_item--active .menu_item-btn {
     background-color: var(--red);
 }
 
